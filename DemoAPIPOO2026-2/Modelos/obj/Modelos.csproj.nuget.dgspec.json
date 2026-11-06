@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jrcog\\OneDrive - UCO\\UCO-2026-2\\Cursos\\POO LV\\Shared\\DemoAPIPOO2026-2\\DemoAPIPOO2026-2\\Modelos\\Modelos.csproj": {}
+    "C:\\Users\\julia\\OneDrive\\Desktop\\2026-2\\poo\\proyecto-poo-2026-2\\DemoAPIPOO2026-2\\Modelos\\Modelos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jrcog\\OneDrive - UCO\\UCO-2026-2\\Cursos\\POO LV\\Shared\\DemoAPIPOO2026-2\\DemoAPIPOO2026-2\\Modelos\\Modelos.csproj": {
+    "C:\\Users\\julia\\OneDrive\\Desktop\\2026-2\\poo\\proyecto-poo-2026-2\\DemoAPIPOO2026-2\\Modelos\\Modelos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jrcog\\OneDrive - UCO\\UCO-2026-2\\Cursos\\POO LV\\Shared\\DemoAPIPOO2026-2\\DemoAPIPOO2026-2\\Modelos\\Modelos.csproj",
+        "projectUniqueName": "C:\\Users\\julia\\OneDrive\\Desktop\\2026-2\\poo\\proyecto-poo-2026-2\\DemoAPIPOO2026-2\\Modelos\\Modelos.csproj",
         "projectName": "Modelos",
-        "projectPath": "C:\\Users\\jrcog\\OneDrive - UCO\\UCO-2026-2\\Cursos\\POO LV\\Shared\\DemoAPIPOO2026-2\\DemoAPIPOO2026-2\\Modelos\\Modelos.csproj",
-        "packagesPath": "C:\\Users\\jrcog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jrcog\\OneDrive - UCO\\UCO-2026-2\\Cursos\\POO LV\\Shared\\DemoAPIPOO2026-2\\DemoAPIPOO2026-2\\Modelos\\obj\\",
+        "projectPath": "C:\\Users\\julia\\OneDrive\\Desktop\\2026-2\\poo\\proyecto-poo-2026-2\\DemoAPIPOO2026-2\\Modelos\\Modelos.csproj",
+        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julia\\OneDrive\\Desktop\\2026-2\\poo\\proyecto-poo-2026-2\\DemoAPIPOO2026-2\\Modelos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jrcog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {}
           }
@@ -44,10 +45,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "imports": [
             "net461",
@@ -65,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
