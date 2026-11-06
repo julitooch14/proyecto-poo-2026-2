@@ -1,0 +1,43 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam maxMessageSize 110
+skinparam ParticipantPadding 8
+skinparam SequenceMessageAlign center
+actor Docente
+participant "Interfaz web\n(panel.js)" as UI
+participant "EvaluacionesController" as C
+participant "EvaluacionServicio" as S
+participant "Evaluacion" as E
+database "AppDbContext" as DB
+Docente -> UI : Inicia sesión (user / user123)
+UI -> C : POST /api/autenticacion/login
+C --> UI : 200 token JWT + rol
+Docente -> UI : Abre "Mis artículos"
+UI -> C : GET /api/evaluaciones/mis-evaluaciones\n(Bearer token)
+C -> S : ListarPorDocenteAsync(docenteId)
+S -> DB : Consultar evaluaciones del docente
+DB --> S : evaluaciones
+S --> C : List<EvaluacionDto>
+C --> UI : 200 lista
+Docente -> UI : Ingresa nota y observaciones
+UI -> C : PUT /api/evaluaciones/{id}/calificar
+C -> S : CalificarAsync(id, docenteId, dto)
+S -> DB : Buscar evaluación
+alt evaluación de otro docente
+  S --> C : AccesoDenegadoException
+  C --> UI : 403
+else evaluación propia
+  S -> E : Calificar(nota, observaciones)
+  alt nota fuera de 0.0 - 5.0
+    E --> S : ReglaNegocioException
+    S --> C : error
+    C --> UI : 400
+  else nota válida
+    S -> DB : GuardarCambios
+    S --> C : EvaluacionDto actualizada
+    C --> UI : 200
+    UI --> Docente : "Nota guardada correctamente"
+  end
+end
+@enduml
