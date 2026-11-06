@@ -1,0 +1,6 @@
+@final_de_poo_HostAddress = http://localhost:5216
+
+GET {{final_de_poo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
