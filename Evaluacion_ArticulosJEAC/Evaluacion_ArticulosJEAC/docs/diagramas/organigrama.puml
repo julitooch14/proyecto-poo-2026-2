@@ -1,0 +1,21 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BackgroundColor #E3F4E8
+  BorderColor #1B7A3D
+}
+rectangle "Universidad Católica de Oriente" as U
+rectangle "Facultad de Ingenierías" as F
+rectangle "Programa de Ingeniería de Sistemas" as P
+rectangle "Coordinación de la JEAC\n(Administrador del sistema)" as C
+rectangle "Docentes asesores" as A
+rectangle "Docentes evaluadores" as E
+rectangle "Estudiantes expositores" as S
+U -down-> F
+F -down-> P
+P -down-> C
+C -down-> A
+C -down-> E
+A -down-> S
+@enduml

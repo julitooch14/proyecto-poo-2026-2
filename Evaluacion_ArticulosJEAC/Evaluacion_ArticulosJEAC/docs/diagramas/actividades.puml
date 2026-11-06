@@ -1,0 +1,27 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+start
+:Iniciar sesión;
+if (¿Credenciales válidas?) then (sí)
+  if (¿Rol?) then (Docente)
+    :Consultar artículos asignados;
+    :Seleccionar artículo;
+    :Revisar resumen, autores y estudiantes;
+    :Ingresar nota (0.0 a 5.0) y observaciones;
+    if (¿Nota válida?) then (sí)
+      :Guardar calificación;
+      :Mostrar confirmación;
+    else (no)
+      :Mostrar mensaje de error;
+    endif
+  else (Admin)
+    :Gestionar docentes, estudiantes,\nartículos y grupos;
+    :Asignar evaluadores (mínimo 2 por grupo);
+    :Consultar resultados consolidados;
+  endif
+else (no)
+  :Mostrar error de autenticación;
+endif
+stop
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam rectangle {
+  BackgroundColor #F2FAF4
+  BorderColor #1B7A3D
+}
+rectangle "1. Consolidación\nde estudiantes" as P1
+rectangle "2. Selección\ndel artículo" as P2
+rectangle "3. Consulta de grupos\ny artículos" as P3
+rectangle "4. Programar jornada\ny asignar evaluadores" as P4
+rectangle "5. Evaluar artículos\nasignados" as P5 #C8E6D0
+rectangle "6. Consolidar\nresultados" as P6
+rectangle "7. Consulta de resultados\nconsolidados" as P7
+P1 -down-> P2
+P2 -down-> P3
+P3 -down-> P4
+P4 -down-> P5
+P5 -down-> P6
+P6 -down-> P7
+@enduml
