@@ -1,0 +1,17 @@
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\bin\Debug\net8.0\Servicios.deps.json
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\bin\Debug\net8.0\Servicios.dll
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\bin\Debug\net8.0\Servicios.pdb
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\bin\Debug\net8.0\Datos.dll
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\bin\Debug\net8.0\Modelos.dll
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\bin\Debug\net8.0\Datos.pdb
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\bin\Debug\net8.0\Modelos.pdb
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\Servicios.csproj.AssemblyReference.cache
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\Servicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\Servicios.AssemblyInfoInputs.cache
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\Servicios.AssemblyInfo.cs
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\Servicios.csproj.Up2Date
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\Servicios.dll
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\refint\Servicios.dll
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\Servicios.pdb
+C:\Users\samue\Desktop\Final Poo\POO_PROYECTO_FINAL_JEAC\Servicios\obj\Debug\net8.0\ref\Servicios.dll
