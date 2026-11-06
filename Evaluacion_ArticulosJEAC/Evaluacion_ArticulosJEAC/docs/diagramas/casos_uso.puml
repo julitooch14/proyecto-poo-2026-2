@@ -1,0 +1,31 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Arial
+left to right direction
+actor "Administrador" as Admin
+actor "Docente evaluador" as Doc
+rectangle "Sistema de evaluación de artículos JEAC" {
+  usecase "Iniciar sesión" as UC1
+  usecase "Gestionar docentes" as UC2
+  usecase "Gestionar estudiantes" as UC3
+  usecase "Gestionar artículos científicos" as UC4
+  usecase "Gestionar grupos de exposición" as UC5
+  usecase "Asignar evaluadores a un grupo" as UC6
+  usecase "Consultar resultados consolidados" as UC7
+  usecase "Consultar artículos asignados" as UC8
+  usecase "Calificar artículo asignado" as UC9
+  usecase "Editar nota y observaciones" as UC10
+}
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+Admin --> UC7
+Doc --> UC1
+Doc --> UC8
+Doc --> UC9
+UC10 .> UC9 : <<extend>>
+UC9 .> UC8 : <<include>>
+@enduml

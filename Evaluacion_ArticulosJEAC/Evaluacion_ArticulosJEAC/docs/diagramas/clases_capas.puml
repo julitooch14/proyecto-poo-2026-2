@@ -1,0 +1,47 @@
+@startuml
+left to right direction
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam classAttributeIconSize 0
+package Controllers {
+  class EvaluacionesController
+  class AutenticacionController
+  class GruposController
+}
+package Services {
+  interface IEvaluacionServicio
+  class EvaluacionServicio
+  interface IAutenticacionServicio
+  class AutenticacionServicio
+  interface IGrupoServicio
+  class GrupoServicio
+}
+package Repositories {
+  interface "IRepositorio<T>" as IRepo
+  class "Repositorio<T>" as Repo
+}
+package Security {
+  interface IGeneradorToken
+  class GeneradorToken
+  interface IHasheadorContrasenas
+  class HasheadorContrasenas
+}
+package Data {
+  class AppDbContext
+}
+EvaluacionesController --> IEvaluacionServicio
+AutenticacionController --> IAutenticacionServicio
+GruposController --> IGrupoServicio
+EvaluacionServicio ..|> IEvaluacionServicio
+AutenticacionServicio ..|> IAutenticacionServicio
+GrupoServicio ..|> IGrupoServicio
+EvaluacionServicio --> IRepo
+GrupoServicio --> IRepo
+AutenticacionServicio --> IRepo
+AutenticacionServicio --> IGeneradorToken
+AutenticacionServicio --> IHasheadorContrasenas
+GeneradorToken ..|> IGeneradorToken
+HasheadorContrasenas ..|> IHasheadorContrasenas
+Repo ..|> IRepo
+Repo --> AppDbContext
+@enduml
