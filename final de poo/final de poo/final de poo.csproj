@@ -12,4 +12,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\jeac.data\jeac.data.csproj" />
+    <ProjectReference Include="..\jeac.domain\jeac.domain.csproj" />
+    <ProjectReference Include="..\jeac.services\jeac.services.csproj" />
+  </ItemGroup>
+
 </Project>

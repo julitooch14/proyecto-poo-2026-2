@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "loginDto",
-        "Type": "final_de_poo.modelos.entidades.UsuarioLoginDto",
+        "Type": "jeac.domain.modelos.entidades.UsuarioLoginDto",
         "IsRequired": true
       }
     ],

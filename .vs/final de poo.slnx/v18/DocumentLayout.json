@@ -1,0 +1,265 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\julia\\final de poo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|c:\\users\\julia\\final de poo\\final de poo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|solutionrelative:final de poo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BA16622-3B9D-4E44-9BE1-70657BB582C0}|jeac.services\\jeac.services.csproj|c:\\users\\julia\\final de poo\\jeac.services\\servicios\\procesoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BA16622-3B9D-4E44-9BE1-70657BB582C0}|jeac.services\\jeac.services.csproj|solutionrelative:jeac.services\\servicios\\procesoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAA95494-84E7-48F8-BE57-159FE1BDFF84}|jeac.data\\jeac.data.csproj|c:\\users\\julia\\final de poo\\jeac.data\\semillerodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAA95494-84E7-48F8-BE57-159FE1BDFF84}|jeac.data\\jeac.data.csproj|solutionrelative:jeac.data\\semillerodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|c:\\users\\julia\\final de poo\\final de poo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|solutionrelative:final de poo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|c:\\users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|solutionrelative:jeac.domain\\modelos\\entidades\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|c:\\users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\grupo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|solutionrelative:jeac.domain\\modelos\\entidades\\grupo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|c:\\users\\julia\\final de poo\\final de poo\\controllers\\procesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|solutionrelative:final de poo\\controllers\\procesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BA16622-3B9D-4E44-9BE1-70657BB582C0}|jeac.services\\jeac.services.csproj|c:\\users\\julia\\final de poo\\jeac.services\\servicios\\authservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BA16622-3B9D-4E44-9BE1-70657BB582C0}|jeac.services\\jeac.services.csproj|solutionrelative:jeac.services\\servicios\\authservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BA16622-3B9D-4E44-9BE1-70657BB582C0}|jeac.services\\jeac.services.csproj|c:\\users\\julia\\final de poo\\jeac.services\\servicios\\ietapaproceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BA16622-3B9D-4E44-9BE1-70657BB582C0}|jeac.services\\jeac.services.csproj|solutionrelative:jeac.services\\servicios\\ietapaproceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|c:\\users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\articulocientifico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|solutionrelative:jeac.domain\\modelos\\entidades\\articulocientifico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|c:\\users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|solutionrelative:jeac.domain\\modelos\\entidades\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|c:\\users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|solutionrelative:jeac.domain\\modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|c:\\users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\suariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E651747-9F93-4514-B875-F4A4BB478C5B}|jeac.domain\\jeac.domain.csproj|solutionrelative:jeac.domain\\modelos\\entidades\\suariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|c:\\users\\julia\\final de poo\\final de poo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|solutionrelative:final de poo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|c:\\users\\julia\\final de poo\\final de poo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D063C020-11D8-8C95-D80D-B3DD99A872F1}|final de poo\\final de poo.csproj|solutionrelative:final de poo\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SemilleroDatos.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.data\\SemilleroDatos.cs",
+              "RelativeDocumentMoniker": "jeac.data\\SemilleroDatos.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.data\\SemilleroDatos.cs",
+              "RelativeToolTip": "jeac.data\\SemilleroDatos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T16:35:08.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "estudiante.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\estudiante.cs",
+              "RelativeDocumentMoniker": "jeac.domain\\modelos\\entidades\\estudiante.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\estudiante.cs",
+              "RelativeToolTip": "jeac.domain\\modelos\\entidades\\estudiante.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:52:38.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\final de poo\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "final de poo\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\final de poo\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "final de poo\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwDMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T04:09:38.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProcesoController.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\final de poo\\Controllers\\ProcesoController.cs",
+              "RelativeDocumentMoniker": "final de poo\\Controllers\\ProcesoController.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\final de poo\\Controllers\\ProcesoController.cs",
+              "RelativeToolTip": "final de poo\\Controllers\\ProcesoController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-02T16:56:15.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "suarioLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\suarioLoginDto.cs",
+              "RelativeDocumentMoniker": "jeac.domain\\modelos\\entidades\\suarioLoginDto.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\suarioLoginDto.cs",
+              "RelativeToolTip": "jeac.domain\\modelos\\entidades\\suarioLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:53:42.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\final de poo\\Program.cs",
+              "RelativeDocumentMoniker": "final de poo\\Program.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\final de poo\\Program.cs",
+              "RelativeToolTip": "final de poo\\Program.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAYwFAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-02T16:56:49.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProcesoServicio.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.services\\servicios\\ProcesoServicio.cs",
+              "RelativeDocumentMoniker": "jeac.services\\servicios\\ProcesoServicio.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.services\\servicios\\ProcesoServicio.cs",
+              "RelativeToolTip": "jeac.services\\servicios\\ProcesoServicio.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:50:43.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthServicio.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.services\\servicios\\AuthServicio.cs",
+              "RelativeDocumentMoniker": "jeac.services\\servicios\\AuthServicio.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.services\\servicios\\AuthServicio.cs",
+              "RelativeToolTip": "jeac.services\\servicios\\AuthServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:48:55.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "grupo.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\grupo.cs",
+              "RelativeDocumentMoniker": "jeac.domain\\modelos\\entidades\\grupo.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\grupo.cs",
+              "RelativeToolTip": "jeac.domain\\modelos\\entidades\\grupo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:53:13.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "usuario.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\usuario.cs",
+              "RelativeDocumentMoniker": "jeac.domain\\modelos\\entidades\\usuario.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\usuario.cs",
+              "RelativeToolTip": "jeac.domain\\modelos\\entidades\\usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:54:05.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "docente.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\docente.cs",
+              "RelativeDocumentMoniker": "jeac.domain\\modelos\\entidades\\docente.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\docente.cs",
+              "RelativeToolTip": "jeac.domain\\modelos\\entidades\\docente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:54:29.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IEtapaProceso.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.services\\servicios\\IEtapaProceso.cs",
+              "RelativeDocumentMoniker": "jeac.services\\servicios\\IEtapaProceso.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.services\\servicios\\IEtapaProceso.cs",
+              "RelativeToolTip": "jeac.services\\servicios\\IEtapaProceso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:50:01.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "articulocientifico.cs",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\articulocientifico.cs",
+              "RelativeDocumentMoniker": "jeac.domain\\modelos\\entidades\\articulocientifico.cs",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\jeac.domain\\modelos\\entidades\\articulocientifico.cs",
+              "RelativeToolTip": "jeac.domain\\modelos\\entidades\\articulocientifico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-07T00:55:41.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\final de poo\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "final de poo\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\final de poo\\appsettings.Development.json",
+              "RelativeToolTip": "final de poo\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-04T04:11:25.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\julia\\final de poo\\final de poo\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "final de poo\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\julia\\final de poo\\final de poo\\Properties\\launchSettings.json",
+              "RelativeToolTip": "final de poo\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-02T17:22:51.993Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

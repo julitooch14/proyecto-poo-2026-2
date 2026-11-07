@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using final_de_poo.servicios;
-using System.Security.Claims;
+using jeac.domain.modelos.entidades;
+using jeac.services;
 
 namespace final_de_poo.Controllers
 {

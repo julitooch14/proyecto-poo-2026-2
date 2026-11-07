@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using final_de_poo.modelos.entidades;
-using final_de_poo.servicios;
+using jeac.domain.modelos.entidades;
+using jeac.services;
 
 namespace final_de_poo.Controllers
 {
@@ -24,21 +24,21 @@ namespace final_de_poo.Controllers
                 return Unauthorized(new { Mensaje = "Credenciales incorrectas" });
             }
 
-            // 1. Rol Administrador
+            // Administrador
             if (loginDto.Email == "admin@uco.edu.co")
             {
                 var token = _authServicio.GenerarToken(loginDto.Email, "Administrador");
                 return Ok(new { Token = token, Rol = "Administrador" });
             }
 
-            // 2. Rol Docentes
+            // Docente
             if (loginDto.Email == "jorge.mario@uco.edu.co" || loginDto.Email == "ricardo.cogollo@uco.edu.co")
             {
                 var token = _authServicio.GenerarToken(loginDto.Email, "Docente");
                 return Ok(new { Token = token, Rol = "Docente" });
             }
 
-            // 3. Rol Estudiantes (Verifica si el correo existe dentro de los grupos)
+            // Estudiante
             var grupoEstudiante = _procesoServicio.ConsultarGrupoPorEstudiante(loginDto.Email);
             if (grupoEstudiante != null)
             {

@@ -1,0 +1,12 @@
+C:\Users\julia\final de poo\jeac.domain\bin\Debug\net8.0\jeac.domain.deps.json
+C:\Users\julia\final de poo\jeac.domain\bin\Debug\net8.0\jeac.domain.dll
+C:\Users\julia\final de poo\jeac.domain\bin\Debug\net8.0\jeac.domain.pdb
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\jeac.domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\jeac.domain.AssemblyInfoInputs.cache
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\jeac.domain.AssemblyInfo.cs
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\jeac.domain.csproj.CoreCompileInputs.cache
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\jeac.domain.dll
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\refint\jeac.domain.dll
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\jeac.domain.pdb
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\ref\jeac.domain.dll
+C:\Users\julia\final de poo\jeac.domain\obj\Debug\net8.0\jeac.dom.71AF7842.Up2Date

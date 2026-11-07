@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="final de poo/final de poo.csproj" />
+  <Project Path="jeac.data/jeac.data.csproj" Id="aaa95494-84e7-48f8-be57-159fe1bdff84" />
+  <Project Path="jeac.domain/jeac.domain.csproj" Id="8e651747-9f93-4514-b875-f4a4bb478c5b" />
+  <Project Path="jeac.services/jeac.services.csproj" Id="6ba16622-3b9d-4e44-9be1-70657bb582c0" />
 </Solution>

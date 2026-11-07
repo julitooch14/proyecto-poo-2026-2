@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "jeac.domain/1.0.0": {
+        "runtime": {
+          "jeac.domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "jeac.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

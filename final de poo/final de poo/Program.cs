@@ -2,7 +2,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using final_de_poo.servicios;
+using jeac.services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -73,12 +73,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
-
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
