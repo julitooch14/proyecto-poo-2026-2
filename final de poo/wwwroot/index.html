@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Académico - Semilleros</title>
+    <!-- Bootstrap 5 CSS e Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card-grupo {
+            border: none;
+            border-radius: 12px;
+        }
+
+        .article-box {
+            background: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .badge-estudiante {
+            background-color: #f1f5f9;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación Superior -->
+    <nav class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi-journal-bookmark-fill me-2 text-primary"></i>Semilleros POO
+            </a>
+            <div class="d-flex align-items-center">
+                <span class="text-white me-3 d-none" id="userBadge">
+                    <i class="bi-person-circle me-1"></i> <span id="lblUser"></span>
+                    <span class="badge bg-primary ms-1" id="lblRole"></span>
+                </span>
+                <button id="btnLogout" class="btn btn-outline-light btn-sm d-none">
+                    <i class="bi-box-arrow-right me-1"></i> Cerrar Sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+
+        <!-- VISTA: LOGIN -->
+        <div id="viewLogin" class="row justify-content-center py-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-lg p-4 border-0 rounded-4">
+                    <div class="text-center mb-4">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex p-3 mb-2">
+                            <i class="bi-shield-lock-fill fs-3"></i>
+                        </div>
+                        <h4 class="fw-bold">Iniciar Sesión</h4>
+                        <p class="text-muted small">Acceso Institucional</p>
+                    </div>
+
+                    <form id="formLogin">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Correo Electrónico</label>
+                            <input type="email" id="txtEmail" class="form-control" placeholder="usuario@uco.edu.co" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Contraseña</label>
+                            <input type="password" id="txtPassword" class="form-control" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">
+                            Ingresar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- VISTA: PANEL DE CONTROL -->
+        <div id="viewDashboard" class="d-none">
+            <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+                <div>
+                    <h3 class="fw-bold text-dark mb-1" id="dashTitle">Panel de Gestión</h3>
+                    <p class="text-muted mb-0" id="dashSubtitle">Consulta y administración de semilleros</p>
+                </div>
+            </div>
+
+            <!-- Contenedor para Alertas -->
+            <div id="alertContainer"></div>
+
+            <!-- Contenido dinámico por Rol (Docente, Estudiante o Administrador) -->
+            <div id="roleContent"></div>
+        </div>
+
+    </div>
+
+    <!-- Script de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+                const API_URL = '/api';
+                let listaArticulosGlobal = [];
+
+                // Procesar formulario de Inicio de Sesión
+                document.getElementById('formLogin').addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const email = document.getElementById('txtEmail').value;
+                    const password = document.getElementById('txtPassword').value;
+
+                    try {
+                        const res = await fetch(`${API_URL}/Auth/login`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ email, password })
+                        });
+
+                        if (!res.ok) throw new Error("Credenciales inválidas");
+
+                        const data = await res.json();
+                        localStorage.setItem('jwtToken', data.token);
+                        localStorage.setItem('userEmail', email);
+                        localStorage.setItem('userRole', data.rol);
+
+                        mostrarDashboard();
+                    } catch (err) {
+                        showAlert('Correo o contraseña incorrectos', 'danger');
+                    }
+                });
+
+                // Cerrar sesión
+                document.getElementById('btnLogout').addEventListener('click', () => {
+                    localStorage.clear();
+                    document.getElementById('viewLogin').classList.remove('d-none');
+                    document.getElementById('viewDashboard').classList.add('d-none');
+                    document.getElementById('userBadge').classList.add('d-none');
+                    document.getElementById('btnLogout').classList.add('d-none');
+                    document.getElementById('txtEmail').value = '';
+                    document.getElementById('txtPassword').value = '';
+                });
+
+                // Configuración y enrutamiento del Dashboard según el Rol
+                async function mostrarDashboard() {
+                    const token = localStorage.getItem('jwtToken');
+                    const role = localStorage.getItem('userRole');
+                    const email = localStorage.getItem('userEmail');
+
+                    if (!token) return;
+
+                    document.getElementById('viewLogin').classList.add('d-none');
+                    document.getElementById('viewDashboard').classList.remove('d-none');
+                    document.getElementById('userBadge').classList.remove('d-none');
+                    document.getElementById('btnLogout').classList.remove('d-none');
+                    document.getElementById('lblUser').innerText = email;
+                    document.getElementById('lblRole').innerText = role;
+
+                    await cargarArticulos();
+
+                    if (role === 'Docente') {
+                        document.getElementById('dashTitle').innerText = "Panel Docente - Mis Grupos a Cargo";
+                        document.getElementById('dashSubtitle').innerText = "Asigna manualmente artículos científicos exclusivos a tus 5 grupos.";
+                        cargarVistaDocente();
+                    } else if (role === 'Estudiante') {
+                        document.getElementById('dashTitle').innerText = "Mi Semillero de Investigación";
+                        document.getElementById('dashSubtitle').innerText = "Consulta tu grupo, compañero, docente y artículo asignado.";
+                        cargarVistaEstudiante();
+                    } else if (role === 'Administrador') {
+                        document.getElementById('dashTitle').innerText = "Panel Administrador";
+                        document.getElementById('dashSubtitle').innerText = "Vista consolidada general de todos los grupos y docentes.";
+                        cargarVistaAdmin();
+                    }
+                }
+
+                // Obtener la lista general de artículos para validar estado
+                async function cargarArticulos() {
+                    const token = localStorage.getItem('jwtToken');
+                    const res = await fetch(`${API_URL}/Proceso/articulos`, {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+                    if (res.ok) listaArticulosGlobal = await res.json();
+                }
+
+                // VISTA DOCENTE: Sus 5 grupos con selector de artículos exclusivo
+                async function cargarVistaDocente() {
+                    const token = localStorage.getItem('jwtToken');
+
+                    await cargarArticulos();
+
+                    const res = await fetch(`${API_URL}/Proceso/docente/mis-grupos`, {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+
+                    const grupos = await res.json();
+                    const container = document.getElementById('roleContent');
+                    container.innerHTML = '<div class="row g-4" id="gridDocente"></div>';
+                    const grid = document.getElementById('gridDocente');
+
+                    grupos.forEach(grupo => {
+                        let options = '<option value="0">-- Sin Artículo (Desasignar) --</option>';
+
+                        listaArticulosGlobal.forEach(art => {
+                            const esArticuloDeEsteGrupo = (grupo.articuloAsignado && grupo.articuloAsignado.id === art.id);
+
+                            // Si el artículo ya está asignado a OTRO grupo, se inhabilita para exclusividad
+                            if (art.asignado && !esArticuloDeEsteGrupo) {
+                                options += `<option value="${art.id}" disabled style="color: #a0aec0;">#${art.id} - ${art.titulo} (ASIGNADO A OTRO GRUPO)</option>`;
+                            } else {
+                                const sel = esArticuloDeEsteGrupo ? 'selected' : '';
+                                options += `<option value="${art.id}" ${sel}>#${art.id} - ${art.titulo}</option>`;
+                            }
+                        });
+
+                        grid.innerHTML += `
+                            <div class="col-md-6">
+                                <div class="card card-grupo shadow-sm p-4 h-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="fw-bold text-dark mb-0">${grupo.nombreGrupo}</h5>
+                                        <span class="badge bg-secondary">Grupo #${grupo.id}</span>
+                                    </div>
+                                    <small class="text-muted d-block mb-3">Docente: ${grupo.docenteNombre}</small>
+
+                                    <div class="mb-3">
+                                        <label class="form-label small fw-bold">Integrantes:</label><br>
+                                        ${grupo.estudiantes.map(e => `<span class="badge badge-estudiante me-1 p-2"><i class="bi-person"></i> ${e.nombre} (${e.email})</span>`).join('')}
+                                    </div>
+
+                                    <div class="mt-auto pt-3 border-top">
+                                        <label class="form-label small fw-bold">Asignación Exclusiva de Artículo:</label>
+                                        <div class="input-group">
+                                            <select class="form-select" id="selArticulo_${grupo.id}">
+                                                ${options}
+                                            </select>
+                                            <button class="btn btn-primary" onclick="guardarAsignacionManual(${grupo.id})">
+                                                <i class="bi-check-lg"></i> Asignar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+                    });
+                }
+
+                // Petición al backend para guardar la asignación exclusiva
+                async function guardarAsignacionManual(grupoId) {
+                    const token = localStorage.getItem('jwtToken');
+                    const articuloId = document.getElementById(`selArticulo_${grupoId}`).value;
+
+                    const res = await fetch(`${API_URL}/Proceso/docente/asignar-manual`, {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ grupoId: parseInt(grupoId), articuloId: parseInt(articuloId) })
+                    });
+
+                    const data = await res.json();
+                    if (res.ok) {
+                        showAlert(data.mensaje, 'success');
+                        cargarVistaDocente();
+                    } else {
+                        showAlert(data.mensaje, 'danger');
+                    }
+                }
+
+                // VISTA ESTUDIANTE: Visualizar su grupo, compañero, docente y artículo asignado
+                async function cargarVistaEstudiante() {
+                    const token = localStorage.getItem('jwtToken');
+                    const res = await fetch(`${API_URL}/Proceso/estudiante/mi-grupo`, {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+
+                    const grupo = await res.json();
+                    const container = document.getElementById('roleContent');
+
+                    const articuloHTML = grupo.articuloAsignado
+                        ? `<div class="article-box mt-3">
+                            <span class="badge bg-primary mb-2">Artículo Asignado #${grupo.articuloAsignado.id}</span>
+                            <h5 class="fw-bold text-dark">${grupo.articuloAsignado.titulo}</h5>
+                            <p class="text-muted mb-0 small">${grupo.articuloAsignado.resumen}</p>
+                           </div>`
+                        : `<div class="alert alert-warning mt-3">El docente a cargo aún no ha asignado un artículo a tu grupo.</div>`;
+
+                    container.innerHTML = `
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card shadow p-4 border-0 rounded-4">
+                                    <h4 class="fw-bold text-primary mb-3">${grupo.nombreGrupo}</h4>
+                                    <p class="mb-2"><strong><i class="bi-person-badge"></i> Docente a Cargo:</strong> ${grupo.docenteNombre} (${grupo.docenteEmail})</p>
+
+                                    <div class="my-3">
+                                        <strong><i class="bi-people-fill"></i> Integrantes del Grupo:</strong>
+                                        <div class="mt-2">
+                                            ${grupo.estudiantes.map(e => `<div class="badge badge-estudiante p-2 me-2 mb-2 fs-6"><i class="bi-person-circle"></i> ${e.nombre} - ${e.email}</div>`).join('')}
+                                        </div>
+                                    </div>
+
+                                    ${articuloHTML}
+                                </div>
+                            </div>
+                        </div>`;
+                }
+
+                // VISTA ADMINISTRADOR: Tabla consolidada de todos los grupos y docentes
+                async function cargarVistaAdmin() {
+                    const token = localStorage.getItem('jwtToken');
+                    const res = await fetch(`${API_URL}/Proceso/admin/consolidado`, {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+
+                    const grupos = await res.json();
+                    const container = document.getElementById('roleContent');
+
+                    let filas = '';
+                    grupos.forEach(g => {
+                        const artStatus = g.articuloAsignado
+                            ? `<span class="badge bg-success">#${g.articuloAsignado.id} - ${g.articuloAsignado.titulo}</span>`
+                            : `<span class="badge bg-danger">Sin Asignar</span>`;
+
+                        filas += `
+                            <tr>
+                                <td><strong>${g.id}</strong></td>
+                                <td>${g.nombreGrupo}</td>
+                                <td>${g.docenteNombre}<br><small class="text-muted">${g.docenteEmail}</small></td>
+                                <td>${g.estudiantes.map(e => e.nombre).join(', ')}</td>
+                                <td>${artStatus}</td>
+                            </tr>`;
+                    });
+
+                    container.innerHTML = `
+                        <div class="table-responsive bg-white rounded shadow-sm p-3">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Grupo</th>
+                                        <th>Docente</th>
+                                        <th>Estudiantes</th>
+                                        <th>Artículo Asignado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>${filas}</tbody>
+                            </table>
+                        </div>`;
+                }
+
+                // Mostrar Alertas emergentes
+                function showAlert(msg, type) {
+                    document.getElementById('alertContainer').innerHTML = `
+                        <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                            ${msg}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>`;
+                }
+
+                // Comprobar sesión al recargar la página
+                if (localStorage.getItem('jwtToken')) {
+                    mostrarDashboard();
+                }
+    </script>
+</body>
+</html>
